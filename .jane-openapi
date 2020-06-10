@@ -1,0 +1,8 @@
+<?php
+
+return [
+    'openapi-file' => __DIR__ . '/godaddy-domains-openapi.yaml',
+    'namespace' => 'GoDaddy\Domain\Api',
+    'directory' => __DIR__ . '/generated',
+    'date-format' => \DateTime::RFC3339_EXTENDED,
+];
