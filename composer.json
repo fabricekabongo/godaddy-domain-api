@@ -10,8 +10,8 @@
 	"license" : "MIT",
 	"require" : {
 		"php" : ">=7.4",
-		"jane-php/json-schema-runtime" : "~6.0",
-		"symfony/translation-contracts": "^2.1"
+		"symfony/translation-contracts": "^2.1",
+		"jane-php/open-api-runtime": "^6.0"
 	},
 	"require-dev": {
 		"jane-php/open-api-3": "^6.0",
