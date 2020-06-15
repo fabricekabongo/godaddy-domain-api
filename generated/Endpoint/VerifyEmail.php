@@ -87,4 +87,8 @@ class VerifyEmail extends \Jane\OpenApiRuntime\Client\BaseEndpoint implements \J
             throw new \GoDaddy\Domain\Api\Exception\VerifyEmailGatewayTimeoutException($serializer->deserialize($body, 'GoDaddy\\Domain\\Api\\Model\\Error', 'json'));
         }
     }
+    public function getAuthenticationScopes() : array
+    {
+        return array('ApiKeyAuth');
+    }
 }

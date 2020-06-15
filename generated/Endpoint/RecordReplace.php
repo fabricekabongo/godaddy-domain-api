@@ -98,4 +98,8 @@ class RecordReplace extends \Jane\OpenApiRuntime\Client\BaseEndpoint implements 
             throw new \GoDaddy\Domain\Api\Exception\RecordReplaceGatewayTimeoutException($serializer->deserialize($body, 'GoDaddy\\Domain\\Api\\Model\\Error', 'json'));
         }
     }
+    public function getAuthenticationScopes() : array
+    {
+        return array('ApiKeyAuth');
+    }
 }

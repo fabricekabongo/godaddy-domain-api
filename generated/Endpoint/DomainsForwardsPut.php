@@ -78,4 +78,8 @@ class DomainsForwardsPut extends \Jane\OpenApiRuntime\Client\BaseEndpoint implem
             throw new \GoDaddy\Domain\Api\Exception\DomainsForwardsPutInternalServerErrorException($serializer->deserialize($body, 'GoDaddy\\Domain\\Api\\Model\\Error', 'json'));
         }
     }
+    public function getAuthenticationScopes() : array
+    {
+        return array('ApiKeyAuth');
+    }
 }

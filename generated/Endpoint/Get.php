@@ -87,4 +87,8 @@ class Get extends \Jane\OpenApiRuntime\Client\BaseEndpoint implements \Jane\Open
             throw new \GoDaddy\Domain\Api\Exception\GetInternalServerErrorException($serializer->deserialize($body, 'GoDaddy\\Domain\\Api\\Model\\Error', 'json'));
         }
     }
+    public function getAuthenticationScopes() : array
+    {
+        return array('ApiKeyAuth');
+    }
 }

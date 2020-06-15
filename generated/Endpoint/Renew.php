@@ -99,4 +99,8 @@ class Renew extends \Jane\OpenApiRuntime\Client\BaseEndpoint implements \Jane\Op
             throw new \GoDaddy\Domain\Api\Exception\RenewInternalServerErrorException($serializer->deserialize($body, 'GoDaddy\\Domain\\Api\\Model\\Error', 'json'));
         }
     }
+    public function getAuthenticationScopes() : array
+    {
+        return array('ApiKeyAuth');
+    }
 }

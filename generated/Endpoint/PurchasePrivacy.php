@@ -99,4 +99,8 @@ class PurchasePrivacy extends \Jane\OpenApiRuntime\Client\BaseEndpoint implement
             throw new \GoDaddy\Domain\Api\Exception\PurchasePrivacyInternalServerErrorException($serializer->deserialize($body, 'GoDaddy\\Domain\\Api\\Model\\Error', 'json'));
         }
     }
+    public function getAuthenticationScopes() : array
+    {
+        return array('ApiKeyAuth');
+    }
 }

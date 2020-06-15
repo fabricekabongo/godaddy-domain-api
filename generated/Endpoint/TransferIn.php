@@ -95,4 +95,8 @@ class TransferIn extends \Jane\OpenApiRuntime\Client\BaseEndpoint implements \Ja
             throw new \GoDaddy\Domain\Api\Exception\TransferInInternalServerErrorException($serializer->deserialize($body, 'GoDaddy\\Domain\\Api\\Model\\Error', 'json'));
         }
     }
+    public function getAuthenticationScopes() : array
+    {
+        return array('ApiKeyAuth');
+    }
 }

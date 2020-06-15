@@ -100,4 +100,8 @@ class ListDomains extends \Jane\OpenApiRuntime\Client\BaseEndpoint implements \J
             throw new \GoDaddy\Domain\Api\Exception\ListDomainsInternalServerErrorException($serializer->deserialize($body, 'GoDaddy\\Domain\\Api\\Model\\Error', 'json'));
         }
     }
+    public function getAuthenticationScopes() : array
+    {
+        return array('ApiKeyAuth');
+    }
 }

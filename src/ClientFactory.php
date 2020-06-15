@@ -4,11 +4,11 @@ namespace GoDaddy\Domain;
 use GoDaddy\Domain\Api\Client;
 use GoDaddy\Domain\Api\Authentication\ApiKeyAuthAuthentication;
 use Http\Client\Common\Plugin\AddHostPlugin;
-use Http\Client\Common\Plugin\AddPathPlugin;
 use Http\Client\Common\PluginClient;
 use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
 use Psr\Http\Client\ClientInterface;
+use Jane\OpenApiRuntime\Client\Plugin\AuthenticationRegistry;
 
 class ClientFactory
 {
@@ -23,8 +23,10 @@ class ClientFactory
 
         $uri = Psr17FactoryDiscovery::findUrlFactory()->createUri($url);
         $pluginClient = new PluginClient($httpClient, [
-            new \Http\Client\Common\Plugin\AddHostPlugin($uri),
-            new ApiKeyAuthAuthentication($authToken)
+            new AddHostPlugin($uri),
+            new AuthenticationRegistry([
+                new ApiKeyAuthAuthentication($authToken)
+            ])
         ]);
 
         return Client::create($pluginClient);

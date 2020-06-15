@@ -71,4 +71,8 @@ class Schema extends \Jane\OpenApiRuntime\Client\BaseEndpoint implements \Jane\O
             throw new \GoDaddy\Domain\Api\Exception\SchemaInternalServerErrorException($serializer->deserialize($body, 'GoDaddy\\Domain\\Api\\Model\\Error', 'json'));
         }
     }
+    public function getAuthenticationScopes() : array
+    {
+        return array('ApiKeyAuth');
+    }
 }

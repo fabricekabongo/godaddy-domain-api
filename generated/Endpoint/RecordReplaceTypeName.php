@@ -104,4 +104,8 @@ class RecordReplaceTypeName extends \Jane\OpenApiRuntime\Client\BaseEndpoint imp
             throw new \GoDaddy\Domain\Api\Exception\RecordReplaceTypeNameGatewayTimeoutException($serializer->deserialize($body, 'GoDaddy\\Domain\\Api\\Model\\Error', 'json'));
         }
     }
+    public function getAuthenticationScopes() : array
+    {
+        return array('ApiKeyAuth');
+    }
 }
