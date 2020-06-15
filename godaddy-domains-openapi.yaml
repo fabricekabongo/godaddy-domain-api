@@ -5690,6 +5690,7 @@ components:
         nameServers:
           type: array
           description: Fully-qualified domain names for DNS servers
+          nullable: true
           items:
             type: string
             format: host-name
@@ -5883,6 +5884,7 @@ components:
         nameServers:
           type: array
           description: Fully-qualified domain names for DNS servers
+          nullable: true
           items:
             type: string
             format: host-name
