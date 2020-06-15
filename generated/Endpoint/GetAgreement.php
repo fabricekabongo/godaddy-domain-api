@@ -94,4 +94,8 @@ class GetAgreement extends \Jane\OpenApiRuntime\Client\BaseEndpoint implements \
             throw new \GoDaddy\Domain\Api\Exception\GetAgreementInternalServerErrorException($serializer->deserialize($body, 'GoDaddy\\Domain\\Api\\Model\\Error', 'json'));
         }
     }
+    public function getAuthenticationScopes() : array
+    {
+        return array('ApiKeyAuth');
+    }
 }

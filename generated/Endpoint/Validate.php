@@ -78,4 +78,8 @@ class Validate extends \Jane\OpenApiRuntime\Client\BaseEndpoint implements \Jane
             throw new \GoDaddy\Domain\Api\Exception\ValidateInternalServerErrorException($serializer->deserialize($body, 'GoDaddy\\Domain\\Api\\Model\\Error', 'json'));
         }
     }
+    public function getAuthenticationScopes() : array
+    {
+        return array('ApiKeyAuth');
+    }
 }

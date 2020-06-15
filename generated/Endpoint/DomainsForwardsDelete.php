@@ -73,4 +73,8 @@ class DomainsForwardsDelete extends \Jane\OpenApiRuntime\Client\BaseEndpoint imp
             throw new \GoDaddy\Domain\Api\Exception\DomainsForwardsDeleteInternalServerErrorException($serializer->deserialize($body, 'GoDaddy\\Domain\\Api\\Model\\Error', 'json'));
         }
     }
+    public function getAuthenticationScopes() : array
+    {
+        return array('ApiKeyAuth');
+    }
 }

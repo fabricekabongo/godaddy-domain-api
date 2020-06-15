@@ -97,7 +97,7 @@ class DomainDetail
     /**
      * Fully-qualified domain names for DNS servers
      *
-     * @var string[]
+     * @var string[]|null
      */
     protected $nameServers;
     /**
@@ -481,20 +481,20 @@ class DomainDetail
     /**
      * Fully-qualified domain names for DNS servers
      *
-     * @return string[]
+     * @return string[]|null
      */
-    public function getNameServers() : array
+    public function getNameServers() : ?array
     {
         return $this->nameServers;
     }
     /**
      * Fully-qualified domain names for DNS servers
      *
-     * @param string[] $nameServers
+     * @param string[]|null $nameServers
      *
      * @return self
      */
-    public function setNameServers(array $nameServers) : self
+    public function setNameServers(?array $nameServers) : self
     {
         $this->nameServers = $nameServers;
         return $this;

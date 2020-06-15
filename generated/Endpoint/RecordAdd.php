@@ -98,4 +98,8 @@ class RecordAdd extends \Jane\OpenApiRuntime\Client\BaseEndpoint implements \Jan
             throw new \GoDaddy\Domain\Api\Exception\RecordAddGatewayTimeoutException($serializer->deserialize($body, 'GoDaddy\\Domain\\Api\\Model\\Error', 'json'));
         }
     }
+    public function getAuthenticationScopes() : array
+    {
+        return array('ApiKeyAuth');
+    }
 }

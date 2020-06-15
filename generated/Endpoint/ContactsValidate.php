@@ -94,4 +94,8 @@ class ContactsValidate extends \Jane\OpenApiRuntime\Client\BaseEndpoint implemen
             throw new \GoDaddy\Domain\Api\Exception\ContactsValidateInternalServerErrorException($serializer->deserialize($body, 'GoDaddy\\Domain\\Api\\Model\\Error', 'json'));
         }
     }
+    public function getAuthenticationScopes() : array
+    {
+        return array('ApiKeyAuth');
+    }
 }

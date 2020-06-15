@@ -70,4 +70,8 @@ class Cancel extends \Jane\OpenApiRuntime\Client\BaseEndpoint implements \Jane\O
             throw new \GoDaddy\Domain\Api\Exception\CancelInternalServerErrorException($serializer->deserialize($body, 'GoDaddy\\Domain\\Api\\Model\\Error', 'json'));
         }
     }
+    public function getAuthenticationScopes() : array
+    {
+        return array('ApiKeyAuth');
+    }
 }

@@ -78,12 +78,15 @@ class DomainDetailNormalizer implements DenormalizerInterface, NormalizerInterfa
         if (\array_key_exists('locked', $data)) {
             $object->setLocked($data['locked']);
         }
-        if (\array_key_exists('nameServers', $data)) {
+        if (\array_key_exists('nameServers', $data) && $data['nameServers'] !== null) {
             $values = array();
             foreach ($data['nameServers'] as $value) {
                 $values[] = $value;
             }
             $object->setNameServers($values);
+        }
+        elseif (\array_key_exists('nameServers', $data) && $data['nameServers'] === null) {
+            $object->setNameServers(null);
         }
         if (\array_key_exists('privacy', $data)) {
             $object->setPrivacy($data['privacy']);

@@ -98,4 +98,8 @@ class Update extends \Jane\OpenApiRuntime\Client\BaseEndpoint implements \Jane\O
             throw new \GoDaddy\Domain\Api\Exception\UpdateInternalServerErrorException($serializer->deserialize($body, 'GoDaddy\\Domain\\Api\\Model\\Error', 'json'));
         }
     }
+    public function getAuthenticationScopes() : array
+    {
+        return array('ApiKeyAuth');
+    }
 }
