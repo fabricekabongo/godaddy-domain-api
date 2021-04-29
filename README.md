@@ -1,3 +1,5 @@
+This is a fork of : https://github.com/slacker775/godaddy-domain-api
+
 # GoDaddy Domain API client
 
 This is a library to access GoDaddy's domain registration/management API via PHP.  This library uses the published Swagger file to auto-generate the client using the Jane libraries from [https://github.com/janephp/janephp](https://github.com/janephp/janephp)
