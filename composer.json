@@ -5,11 +5,11 @@
                         "GoDaddy\\Domain\\" : "src/"
 		}
 	},
-	"name" : "slacker775/godaddy-domain-api",
+	"name" : "fabricekabongo/godaddy-domain-api",
 	"type" : "library",
 	"license" : "MIT",
 	"require" : {
-		"php" : ">=7.4",
+		"php" : ">=7.3",
 		"symfony/translation-contracts": "^2.1",
 		"jane-php/open-api-runtime": "^6.0"
 	},
