@@ -11,7 +11,7 @@
 	"require" : {
 		"php" : ">=7.3",
 		"symfony/translation-contracts": "^2.1",
-		"jane-php/open-api-runtime": "^6.0"
+		"jane-php/open-api-runtime": "^6.3.7"
 	},
 	"require-dev": {
 		"jane-php/open-api-3": "^6.0",
